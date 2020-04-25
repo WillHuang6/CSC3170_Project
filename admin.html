@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Top Information</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href = "css/admin.css" />
+<script src="js/jquery-3.5.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3.11.0/dist/av-min.js"></script>
+<script src="js/initLeanCloud.js"></script>
+<script src="js/admin.js"></script>
+<script src="js/search.js"></script>
+</head>
+
+<body style="background-image: url('img/img3.jpeg');background-repeat:no-repeat;background-size:cover">
+
+<nav id="nav">
+    <ul>
+        <li><a href="admin.html" class="nav">Home</a></li>
+        <li><a href="aboutUs.html" class="nav">About Us</a></li>
+    </ul>
+    <div>
+    <div  class="search bar6">
+        <form>
+            <input type="text" id="search_text" autocomplete="off" placeholder="请输入战队、球员或英雄名称"/>
+            <button id="search" type="submit" onclick="goTo();return false;"> </button>
+            <div id="auto_div"></div>
+        </form>
+    </div>
+    </div>
+</nav>
+
+<!--队伍-->
+<div class="row">
+    <p class="head">Top Teams</p>
+    <div class="column">
+        <p>Top Win Rate</p>
+        <p id="team_win_1"></p>
+        <p id="team_win_2"></p>
+        <p id="team_win_3"></p>
+        <p id="team_win_4"></p>
+        <p id="team_win_5"></p>
+    </div>
+    
+    <div class = "column">
+        <p>Top Lose Rate</p>
+        <p id="team_lose_1"></p>
+        <p id="team_lose_2"></p>
+        <p id="team_lose_3"></p>
+        <p id="team_lose_4"></p>
+        <p id="team_lose_5"></p>
+    </div>
+</div>
+
+
+<!--队员-->
+<div class="row">
+    <p class="head">Top Players</p>
+    <div class="column">
+        <p>Top Avg Kill</p>
+        <p id="player_kill_1"></p>
+        <p id="player_kill_2"></p>
+        <p id="player_kill_3"></p>
+        <p id="player_kill_4"></p>
+        <p id="player_kill_5"></p>
+    </div>
+    
+    <div class= "column">
+        <p>Top Avg Assist</p>
+        <p id="player_assist_1"></p>
+        <p id="player_assist_2"></p>
+        <p id="player_assist_3"></p>
+        <p id="player_assist_4"></p>
+        <p id="player_assist_5"></p>
+    </div>
+    
+    <div class="column">    
+        <p>Top Avg Death</p>
+        <p id="player_death_1"></p>
+        <p id="player_death_2"></p>
+        <p id="player_death_3"></p>
+        <p id="player_death_4"></p>
+        <p id="player_death_5"></p>
+    </div>
+</div>
+
+
+<!--英雄-->
+<div class="row">
+    <p class="head">Top Heroes</p>
+    <div class="column">
+        <p>Top Win Rate</p>
+        <p id="hero_win_1"></p>
+        <p id="hero_win_2"></p>
+        <p id="hero_win_3"></p>
+        <p id="hero_win_4"></p>
+        <p id="hero_win_5"></p>
+    </div>
+    
+    <div class="column">
+        <p>Top Pick Rate</p>
+        <p id="hero_pick_1"></p>
+        <p id="hero_pick_2"></p>
+        <p id="hero_pick_3"></p>
+        <p id="hero_pick_4"></p>
+        <p id="hero_pick_5"></p>
+    </div>
+    
+    <div class="column">
+        <p>Top Ban Rate</p>
+        <p id="hero_ban_1"></p>
+        <p id="hero_ban_2"></p>
+        <p id="hero_ban_3"></p>
+        <p id="hero_ban_4"></p>
+        <p id="hero_ban_5"></p>
+    </div>
+</div>
+
+
+
+</body>
+</html>

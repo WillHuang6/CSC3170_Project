@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Player Info</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href = "css/admin.css" />
+<script src="js/jquery-3.5.0.min.js"></script>
+<!--Leancloud SDK-->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage@4.5.3/dist/av-min.js"></script>
+-->
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3.11.0/dist/av-min.js"></script>
+<script src="js/initLeanCloud.js"></script>
+<script src="js/player.js"></script>
+<script src="js/admin.js"></script>
+<script src="js/search.js"></script>
+</head>
+
+<body style="background-image: url('img/img3.jpeg');background-repeat:no-repeat;background-size:cover">
+
+<nav id="nav">
+    <ul>
+        <li><a href="admin.html" class="nav">Home</a></li>
+        <li><a href="aboutUs.html" class="nav">About Us</a></li>
+        </li>
+    </ul>
+    <div>
+    <div  class="search bar6">
+        <form>
+            <input type="text" id="search_text" autocomplete="off" placeholder="请输入战队、球员或英雄名称"/>
+            <button id="search" type="submit" onclick="goTo();return false;"> </button>
+            <div id="auto_div"></div>
+        </form>
+    </div>
+    </div>
+</nav>
+<!--选手信息-->
+<p style="padding-left:30px;">Player Information</p>
+<table border="1" style="margin-left:30px;">
+<!--第一行信息-->
+<tr>
+    <td>Name</td>
+    <td>Team</td>
+    <td>Avg Kills</td>
+    <td>Avg Assists</td>
+    <td>Avg Deaths</td>
+</tr>
+<tr>
+    <td id="player_name"></td>
+    <td id="player_team"></td>
+    <td id="player_kill"></td>
+    <td id="player_assist"></td>
+    <td id="player_death"></td>
+</tr>
+<!--第二行信息-->
+<tr>
+        <td>Master Hero</td>
+        <td>Match Played</td>
+        <td>Match Won</td>
+        <td>Match Lost</td>
+        <td>Win Rate</td>
+    </tr>
+    <tr>
+        <td id="player_hero"></td>
+        <td id="player_played"></td>
+        <td id="player_win"></td>
+        <td id="player_lost"></td>
+        <td id="player_win_rate"></td>
+    </tr>
+
+</table>
+
+
+
+</body>
+</html>

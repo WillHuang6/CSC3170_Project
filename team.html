@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Team Info</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href = "css/admin.css" />
+<script src="js/jquery-3.5.0.min.js"></script>
+<!--Leancloud SDK-->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage@4.5.3/dist/av-min.js"></script>
+-->
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3.11.0/dist/av-min.js"></script>
+<script src="js/initLeanCloud.js"></script>
+<script src="js/team.js"></script>
+<script src="js/search.js"></script>
+</head>
+
+<body style="background-image: url('img/img3.jpeg');background-repeat:no-repeat;background-size:cover">
+
+<nav id="nav">
+    <ul>
+        <li><a href="admin.html" class="nav">Home</a></li>
+        <li><a href="aboutUs.html" class="nav">About Us</a></li>
+        </li>
+    </ul>
+    <div>
+    <div  class="search bar6">
+        <form>
+            <input type="text" id="search_text" autocomplete="off" placeholder="请输入战队、球员或英雄名称"/>
+            <button id="search" type="submit" onclick="goTo();return false;"> </button>
+            <div id="auto_div"></div>
+        </form>
+    </div>
+    </div>
+</nav>
+<!--头部队伍信息-->
+<p style="padding-left:30px;">Team Information</p>
+<table border="1" style="margin-left:30px;">
+<tr>
+    <td>Team Name</td>
+    <td>Win Rate</td>
+    <td>Match Played </td>
+    <td>Match Won</td>
+    <td>Match Lost</td>
+</tr>
+<tr>
+    <td id="team_name"></td>
+    <td id="team_win_rate"></td>
+    <td id="team_match_played"></td>
+    <td id="team_match_won"></td>
+    <td id="team_match_lost"></td>
+</tr>
+</table>
+
+<!--底部队员信息-->
+<p style="padding-left:30px;">Teammate</p>
+<table border="1" style="margin-left:30px;">
+        <tr>
+            <td>Member 1</td>
+            <td>Member 2</td>
+            <td>Member 3</td>
+            <td>Member 4</td>
+            <td>Member 5</td>
+        </tr>
+        <tr>
+            <td id="teammate_1"></td>
+            <td id="teammate_2"></td>
+            <td id="teammate_3"></td>
+            <td id="teammate_4"></td>
+            <td id="teammate_5"></td>
+        </tr>
+        </table>
+
+</body>
+</html>

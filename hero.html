@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hero Info</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href = "css/admin.css" />
+<script src="js/jquery-3.5.0.min.js"></script>
+<!--Leancloud SDK-->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage@4.5.3/dist/av-min.js"></script>
+-->
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3.11.0/dist/av-min.js"></script>
+<script src="js/initLeanCloud.js"></script>
+<script src="js/hero.js"></script>
+<script src="js/admin.js"></script>
+<script src="js/search.js"></script>
+</head>
+
+<body style="background-image: url('img/img3.jpeg');background-repeat:no-repeat;background-size:cover">
+
+<nav id="nav">
+    <ul>
+        <li><a href="admin.html" class="nav">Home</a></li>
+        <li><a href="aboutUs.html" class="nav">About Us</a></li>
+        </li>
+    </ul>
+    <div>
+    <div  class="search bar6">
+        <form>
+            <input type="text" id="search_text" autocomplete="off" placeholder="请输入战队、球员或英雄名称"/>
+            <button id="search" type="submit" onclick="goTo();return false;"> </button>
+            <div id="auto_div"></div>
+        </form>
+    </div>
+    </div>
+</nav>
+<!--头部队伍信息-->
+<p style="padding-left:30px;">Hero Information</p>
+<table border="1" style="margin-left:30px;">
+<!--第一行-->
+<tr>
+    <td>Name</td>
+    <td>Attack Range</td>
+    <td>Strength</td>
+    <td>Agility</td>
+    <td>Intelligence</td>
+</tr>
+<tr>
+    <td id="hero_name"></td>
+    <td id="hero_attack_range"></td>
+    <td id="hero_strength"></td>
+    <td id="hero_agility"></td>
+    <td id="hero_intelligence"></td>
+</tr>
+<!--第二行-->
+<tr>
+        <td>Speed</td>
+        <td>Turning Speed</td>
+        <td>Win Rate</td>
+        <td>Pick Rate</td>
+        <td>Ban Rate</td>
+    </tr>
+    <tr>
+        <td id="hero_speed"></td>
+        <td id="hero_turning"></td>
+        <td id="hero_win_rate"></td>
+        <td id="hero_pick_rate"></td>
+        <td id="hero_banpick_rate"></td>
+    </tr>
+
+</table>
+
+
+</body>
+</html>
